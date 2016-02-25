@@ -2,19 +2,49 @@
 <html>
 	<head>
 		<title>Teste de Mercado - Valemobi</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
 	</head>
 	<body>
-		<form>
-			<label>Código da Mercadoria</label><input type="number"></input>
-			<label>Tipo da Mercadoria</label><input type="text"></input>
-			<label>Nome da Mercadoria</label><input type="text"></input>
-			<label>Quantidade</label><input type="number"></input>
-			<label>Preço</label><input type="text"></input>
-			<label>Tipo de Negócio</label> 
-			<select>
-				<option value="Venda">Venda</option>
-				<option value="Compra">Compra</option>	
-			</select>
-		</form>
+		<div class="formulario">
+			<form method="POST" action="regitra.php">
+				<div class="form-group">
+					<label>Código da Mercadoria: </label><input type="text" data-validation="required number" class="form-control" data-validation-help="Somente Números" data-validation-error-msg="Você não digitou o código da mercadoria!"></input>
+				</div> 
+				<div class="form-group">
+					<label>Tipo da Mercadoria: </label><input type="text" data-validation="required" class="form-control" data-validation-help="Descrição do produto" data-validation-error-msg="Você não digitou o tipo da mercadoria!"></input>
+				</div>
+				<div class="form-group">
+					<label>Nome da Mercadoria: </label><input type="text" class="form-control" data-validation="required" data-validation-error-msg="Você não digitou o nome da mercadoria!"></input>
+				</div>
+				<div class="form-group">
+					<label>Quantidade: </label><input type="number" class="form-control" data-validation="required" data-validation-error-msg="Você não digitou a quantidade de mercadoria!"></input>
+				</div>
+				<div class="form-group">
+					<label>Preço: </label><input type="text" class="form-control" data-validation="required" data-validation-error-msg="Você não digitou o preço da mercadoria!"></input>
+				</div>
+				<div class="form-group">
+					<label>Tipo de Negócio: </label> 
+					<select>
+						<option value="Venda">Venda</option>
+						<option value="Compra">Compra</option>	
+					</select>
+				</div>
+				
+				<button type="submit">Enviar</button>
+			</form>
+		</div>
+
+		<script src="js/jquery-2.2.1.min.js"></script>
+		<script src="jQuery-Form-Validator-master/form-validator/jquery.form-validator.min.js"></script>
+		<script>
+		  $.validate({
+		    validateOnBlur : false, // disable validation when input looses focus
+		    errorMessagePosition : 'top', // Instead of 'element' which is default
+		    scrollToTopOnError : false, // Set this property to true if you have a long form
+		    lang : 'pt'
+		  });
+
+		</script>
 	</body>
 </html>
