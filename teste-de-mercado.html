@@ -24,13 +24,13 @@
 					<label>Tipo da Mercadoria: </label><input type="text" name="tipo_mercadoria" id="tipo_mercadoria" data-validation="required" class="form-control" data-validation-help="Descrição do produto" data-validation-error-msg="Você não digitou o tipo da mercadoria!"></input>
 				</div>
 				<div class="form-group">
-					<label>Nome da Mercadoria: </label><input type="text" name="nome_mercadoria" id="nome_mercadoria" class="form-control" data-validation="required" data-validation-error-msg="Você não digitou o nome da mercadoria!"></input>
+					<label>Nome da Mercadoria: </label><input type="text" name="nome_mercadoria" id="nome_mercadoria" class="form-control" data-validation="required" data-validation-help='Ex: Tv 40" LG' data-validation-error-msg="Você não digitou o nome da mercadoria!"></input>
 				</div>
 				<div class="form-group">
-					<label>Quantidade: </label><input type="number" name="quantidade" id="quantidade" class="form-control" data-validation="required number" data-validation-error-msg="Você não digitou a quantidade de mercadoria!"></input>
+					<label>Quantidade: </label><input type="number" name="quantidade" id="quantidade" class="form-control" data-validation="required number" data-validation-help="Somente Números" data-validation-error-msg="Você não digitou a quantidade de mercadoria!"></input>
 				</div>
 				<div class="form-group">
-					<label>Preço: </label><input type="text" name="preco" id="preco" class="form-control" data-validation="required" data-validation-error-msg="Você não digitou o preço da mercadoria!"></input>
+					<label>Preço: </label><input type="text" name="preco" id="preco" class="form-control" data-validation="required" data-validation-help="Ex: 2150,00" data-validation-error-msg="Você não digitou o preço da mercadoria!"></input>
 				</div>
 				<div class="form-group">
 					<label>Tipo de Negócio: </label> 
@@ -46,7 +46,7 @@
 
 		<script src="js/jquery-2.2.1.min.js"></script>
 		<script src="jQuery-Form-Validator-master/form-validator/jquery.form-validator.min.js"></script>
-		<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"</script>
+		
 		<script>
 		  $.validate({
 		    validateOnBlur : false, // disable validation when input looses focus
